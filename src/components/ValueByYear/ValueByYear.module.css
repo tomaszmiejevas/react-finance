@@ -1,0 +1,71 @@
+.form {
+  color: white;
+  padding: 20px;
+  margin: 20px;
+}
+
+.form div, .form button{
+  display: inline-block;
+  margin-right: 30px;
+}
+
+.form label {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.amountInput {
+  padding: 10px 50px;
+  padding-left: 50px;
+}
+
+.yearInput {
+  width: 125px;
+  padding: 10px 10px;
+}
+
+.form input[type="number"] {
+  font-size: 20px;
+}
+
+.submitButton {
+  vertical-align: bottom;
+  padding: 14px 30px;
+  border-radius: 3px;
+  margin-left: 10px;
+  /* background-color: #13ba21;
+  color: white;
+  font-weight: bold;
+  font-size: 18px; */
+}
+
+.inputDollarSign {
+  position: relative;
+  color: black;
+}
+
+.inputDollarSign::before {
+  font-size: 24px;
+  font-weight: bold;
+  z-index: 999;
+  position: absolute;
+  top: 23px;
+  content: "$";
+  left: 15px;
+}
+
+.amount {
+  color:#13ba21;
+}
+
+.outputContainer {
+  margin: 20px;
+  padding: 20px;
+  margin-left: 150px;
+  font-size: 30px;
+}
+
+.outputContainer span {
+  font-weight: bold;
+}

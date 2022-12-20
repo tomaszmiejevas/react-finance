@@ -1,0 +1,26 @@
+body {
+  background-color: #245882;
+}
+
+.whole-wrapper {
+  width: 100%;
+}
+
+.whole-wrapper h1 {
+  color: white;
+  margin: 40px;
+}
+
+.wrapper {
+  width: 98%;
+  margin-left: 20px;
+  margin-bottom: 50px;
+  color: white;
+  border: 1px solid black;
+}
+
+.info-wrapper {
+  width: 450px;
+  display: inline-block;
+  vertical-align: top
+}
