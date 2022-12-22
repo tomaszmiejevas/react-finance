@@ -14,7 +14,7 @@ const OutputGraph = (props) => {
   const currentValueByYear = [];
 
   for (var i = 0; i <= props.info.years; i++){
-    yearsLabels.push(parseInt(i));
+    yearsLabels.push(i);
     valueByYear.push(dataContext.calculateInterest(props.info.principal, props.info.returnRate, props.info.yearlyContribution, i, props.info.contributionTime, props.info.contributionFrequency, props.info.compoundingFrequency, 0));
     currentValueByYear.push(dataContext.calculateInterest(props.info.principal, props.info.returnRate, props.info.yearlyContribution, i, props.info.contributionTime, props.info.contributionFrequency, props.info.compoundingFrequency, 0) * dataContext.calculateInflation(i, 3.8, 0))
   }
