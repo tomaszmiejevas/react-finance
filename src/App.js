@@ -6,6 +6,7 @@ import InfoInput from "./components/Input/InfoInput";
 import OutputInfo from "./components/Output/OutputInfo";
 import OutputGraph from "./components/Output/OutputGraph";
 import ValueByYear from "./components/ValueByYear/ValueByYear";
+import LiveDividend from "./components/LiveDividend/LiveDividend";
 
 function App() {
   const [data, setData] = useState({
@@ -35,6 +36,9 @@ function App() {
       <div className="wrapper">
         <h1>CPI Inflation Calculator (1913-2022)</h1>
         <ValueByYear />
+      </div>
+      <div>
+        <LiveDividend />
       </div>
     </div>
   );
