@@ -6,6 +6,7 @@ import InfoInput from "./components/Input/InfoInput";
 import OutputInfo from "./components/Output/OutputInfo";
 import OutputGraph from "./components/Output/OutputGraph";
 import ValueByYear from "./components/ValueByYear/ValueByYear";
+import MortgageCalc from "./components/MortgageCalc/MortgageCalc";
 
 function App() {
   const [data, setData] = useState({
@@ -36,9 +37,12 @@ function App() {
         <h1>CPI Inflation Calculator (1913-2022)</h1>
         <ValueByYear />
       </div>
+      <div className="wrapper">
+        <h1>Mortgage Calculator</h1>
+        <MortgageCalc />
+      </div>
     </div>
   );
 }
-
 
 export default App;
