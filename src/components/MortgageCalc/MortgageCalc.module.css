@@ -24,6 +24,12 @@
     width: 125px;
     padding: 10px 10px;
   }
+
+  .loanTermInput {
+    height: 48px;
+    width: 100px;
+    text-align: center;
+  }
   
   .form input[type="number"] {
     font-size: 20px;
@@ -34,10 +40,6 @@
     padding: 14px 30px;
     border-radius: 3px;
     margin-left: 10px;
-    /* background-color: #13ba21;
-    color: white;
-    font-weight: bold;
-    font-size: 18px; */
   }
   
   .inputDollarSign {
@@ -53,6 +55,21 @@
     top: 23px;
     content: "$";
     left: 15px;
+  }
+
+  .inputPercentageSign {
+    position: relative;
+    color: black;
+  }
+  
+  .inputPercentageSign::before {
+    font-size: 24px;
+    font-weight: bold;
+    z-index: 999;
+    position: absolute;
+    top: 23px;
+    content: "%";
+    left: 115px;
   }
   
   .amount {

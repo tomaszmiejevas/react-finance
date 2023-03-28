@@ -69,15 +69,15 @@ const contributionFrequencyChangeHandler = (event) => {
         <input type="number" placeholder="6%" value={returnRate} onChange={returnRateChangeHandler} min="0" max="999"/>
         <label htmlFor="Compounded">Compounded:</label>
         <select name="Compounded" id="Compounded" onChange={compoundingFrequencyChangeHandler}>
-         <option value="1">Anually</option>
-         <option value="2">Semianually</option>
-         <option value="4">Quarterly</option>
-         <option value="12">Monthly</option>
-         <option value="24">Semimonthly</option>
-         <option value="26">Biweekly</option>
-         <option value="52">Weekly</option>
-         <option value="365">Daily</option>
-         <option value="999">Continuously</option>
+          <option value="1">Anually</option>
+          <option value="2">Semianually</option>
+          <option value="4">Quarterly</option>
+          <option value="12">Monthly</option>
+          <option value="24">Semimonthly</option>
+          <option value="26">Biweekly</option>
+          <option value="52">Weekly</option>
+          <option value="365">Daily</option>
+          <option value="999">Continuously</option>
         </select>
       </div>
       <div className={styles.rightSide}>
