@@ -25,9 +25,14 @@
     padding: 10px 10px;
   }
 
+  .downPaymentInput {
+    width: 100px;
+    padding: 10px 40px;
+  }
+
   .loanTermInput {
     height: 48px;
-    width: 100px;
+    width: 120px;
     text-align: center;
   }
   
