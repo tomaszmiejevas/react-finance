@@ -7,7 +7,7 @@ import OutputInfo from "./components/Output/OutputInfo";
 import OutputGraph from "./components/Output/OutputGraph";
 import ValueByYear from "./components/ValueByYear/ValueByYear";
 import MortgageCalc from "./components/MortgageCalc/MortgageCalc";
-import LiveDividend from "./components/LiveDividend/LiveDividend";
+import InterestVisualization from "./components/InterestVisualization/InterestVisualization";
 
 function App() {
   const [data, setData] = useState({
@@ -43,7 +43,7 @@ function App() {
         <MortgageCalc />
       </div>
       <div>
-        <LiveDividend />
+        <InterestVisualization />
       </div>
     </div>
   );
