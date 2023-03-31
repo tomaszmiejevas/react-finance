@@ -92,7 +92,7 @@ const OutputInfo = (props) => {
         <div>
           <label htmlFor="DownPayment">Down Payment</label>
           <span className={styles.inputDollarSign}>
-            <input type="number" name="downPayment" className={styles.downPaymentInput} placeholder="86,000" min="0" value={downPayment} onChange={e => downPaymentChangeHandler(e.target.value)}/>
+            <input type="number" name="downPayment" className={styles.downPaymentInput} placeholder="86,000" min="0" max={principal} value={downPayment} onChange={e => downPaymentChangeHandler(e.target.value)}/>
           </span>
         </div>
         <div>
@@ -118,9 +118,7 @@ const OutputInfo = (props) => {
         <button type="submit" className={styles.submitButton}>Calculate</button>
       </form>
       <div className={styles.outputContainer}>
-
         <p><strong>Monthly Payment:</strong> <span className={styles.amount}>${monthlyPayment.toFixed(2)}</span></p>
-
       </div>
     </React.Fragment>
  )

@@ -42,7 +42,8 @@ function App() {
         <h1>Mortgage Calculator</h1>
         <MortgageCalc />
       </div>
-      <div>
+      <div className="wrapper">
+      <h1>Interest Visualization</h1>
         <InterestVisualization />
       </div>
     </div>
