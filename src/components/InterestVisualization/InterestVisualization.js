@@ -3,8 +3,8 @@ import styles from './InterestVisualization.module.css';
 
 const InterestVisualization = () => {
 
-   const [capital, setCapital] = useState('');
-   const [interestRate, setInterestRate] = useState('');
+   const [capital, setCapital] = useState(10000);
+   const [interestRate, setInterestRate] = useState(6.5);
 
    const [startButtonText, setStartButtonText] = useState("Start");
 
@@ -12,7 +12,7 @@ const InterestVisualization = () => {
    const [buttonText, setButtonText] = useState("Turn ON");
    const [buttonColor, setButtonColor] = useState("green");
 
-   const [totalReturn, setTotalReturn] = useState(1.5);
+   const [totalReturn, setTotalReturn] = useState(capital);
 
   
    const turnButton = (event) => {
@@ -38,14 +38,6 @@ const InterestVisualization = () => {
 
       turnButton(event);
 
-      
-      if(event.target.capital.value === ''){
-         setCapital(10000);
-      }
-      if(event.target.interestRate.value === ''){
-         setInterestRate(6.5)
-      }
-
       capitalChangeHandler(event.target.capital.value);
       interestRateChangeHandler(event.target.interestRate.value);
       setTotalReturn(0);
@@ -61,11 +53,12 @@ const InterestVisualization = () => {
    }
 
    useEffect(() => {
+      setTotalReturn(capital);
       if(buttonText === "Turn OFF"){
-         const interval = setInterval(() => setTotalReturn((oldCount) => oldCount * oldCount, 100));
+         const interval = setInterval(() => setTotalReturn((oldCount) => (oldCount * (1 + 1/3153600000)), 10));
          return () => clearInterval(interval);
       }
-   },[buttonText])
+   },[buttonText, capital])
 
 
    return (
@@ -89,7 +82,7 @@ const InterestVisualization = () => {
             </div>
          </form>
          <div className={styles.outputContainer}>
-            <p><strong>Return:</strong> <span className={styles.amount}>${totalReturn}</span></p>
+            <p><strong>Return:</strong> <span className={styles.amount}>${totalReturn - capital}</span></p>
          </div>
       </React.Fragment>
    )
