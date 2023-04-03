@@ -55,10 +55,10 @@ const InterestVisualization = () => {
    useEffect(() => {
       setTotalReturn(capital);
       if(buttonText === "Turn OFF"){
-         const interval = setInterval(() => setTotalReturn((oldCount) => (oldCount * (1 + 1/3153600000)), 10));
+         const interval = setInterval(() => setTotalReturn((oldCount) => (oldCount * Math.pow(Math.E, ((interestRate/100) * (1/31536000) ))), 1000));
          return () => clearInterval(interval);
       }
-   },[buttonText, capital])
+   },[buttonText, capital, interestRate])
 
 
    return (

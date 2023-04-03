@@ -17,10 +17,12 @@ const OutputInfo = (props) => {
 
   const downPaymentChangeHandler = (value) => {
     setDownPayment(value);
+    setDownPaymentPercent((100*value/principal).toFixed(2));
   }
 
   const downPaymentPercentChangeHandler = (value) => {
     setDownPaymentPercent(value);
+    setDownPayment(principal * value/100);
   }
 
   const interestRateChangeHandler = (value) => {
@@ -98,7 +100,7 @@ const OutputInfo = (props) => {
         <div>
           <label htmlFor="InterestRate">As %</label>
           <span className={styles.inputPercentageSign}>
-            <input type="number" name="downPaymentPercent" className={styles.yearInput} placeholder="20" min="0" max="100" value={downPaymentPercent} onChange={e => downPaymentPercentChangeHandler(e.target.value)}/>
+            <input type="number" name="downPaymentPercent" className={styles.yearInput} placeholder="20" min="0" max="100" step="0.01" value={downPaymentPercent} onChange={e => downPaymentPercentChangeHandler(e.target.value)}/>
           </span>
         </div>
         <div>
