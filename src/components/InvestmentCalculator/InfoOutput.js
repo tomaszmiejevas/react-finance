@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 
-import styles from './OutputInfo.module.css';
+import styles from './InfoOutput.module.css';
 
 import DataContext from '../../context/data-context';
 

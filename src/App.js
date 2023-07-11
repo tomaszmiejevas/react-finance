@@ -2,9 +2,7 @@ import React, { useState } from "react";
 
 import "./App.css";
 
-import InfoInput from "./components/Input/InfoInput";
-import OutputInfo from "./components/Output/OutputInfo";
-import OutputGraph from "./components/Output/OutputGraph";
+import InvestmentCalculator from "./components/InvestmentCalculator/InvestmentCalculator";
 import ValueByYear from "./components/ValueByYear/ValueByYear";
 import MortgageCalc from "./components/MortgageCalc/MortgageCalc";
 import InterestVisualization from "./components/InterestVisualization/InterestVisualization";
@@ -26,14 +24,7 @@ function App() {
 
   return (
     <div className="whole-wrapper">
-      <h1>Investment Returns Calculator</h1>
-      <div className="wrapper">
-        <div className="info-wrapper">
-          <InfoInput onSendData={dataHandler} />
-          <OutputInfo info={data} />
-        </div>
-        <OutputGraph info={data} />
-      </div>
+      <InvestmentCalculator />
       <div className="wrapper">
         <h1>CPI Inflation Calculator (1913-2022)</h1>
         <ValueByYear />
