@@ -1,13 +1,25 @@
+import React, { useState } from "react";
+
 import InfoInput from "./InfoInput";
 import InfoOutput from "./InfoOutput";
 import Graph from "./Graph";
 
-const dataHandler = (value) => {
-    setData(value);
-  };
-
 
 const InvestmentCalculator = (props) => {
+
+    const [data, setData] = useState({
+        principal: 0,
+        years: 0,
+        returnRate: 0,
+        yearlyContribution: 0,
+        compoundingFrequency: 1,
+        contributionTime: 'end',
+        contributionFrequency: 'month'
+      });
+    
+      const dataHandler = (value) => {
+        setData(value);
+      };
 
     return (
         <div className="whole-wrapper">
